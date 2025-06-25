@@ -1,0 +1,74 @@
+{
+  "api": {
+    "name": "NativeFileDownloaderPlugin",
+    "slug": "nativefiledownloaderplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "scheduleFileDownload",
+        "signature": "(options: ScheduleFileDownloadOptions) => Promise<ScheduleFileDownloadResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ScheduleFileDownloadOptions"
+          }
+        ],
+        "returns": "Promise<ScheduleFileDownloadResult>",
+        "tags": [],
+        "docs": "Schedule file to be downloaded.\nReturned Promise resolves when the download is scheduled (not when download completes).",
+        "complexTypes": [
+          "ScheduleFileDownloadResult",
+          "ScheduleFileDownloadOptions"
+        ],
+        "slug": "schedulefiledownload"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "ScheduleFileDownloadResult",
+      "slug": "schedulefiledownloadresult",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "downloadId",
+          "tags": [],
+          "docs": "The internal identifier of scheduled download process.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    },
+    {
+      "name": "ScheduleFileDownloadOptions",
+      "slug": "schedulefiledownloadoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "url",
+          "tags": [],
+          "docs": "Url of the file to be downloaded.\ne.g. https://example.com/downloads/file.pdf",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "fileName",
+          "tags": [],
+          "docs": "Name of the downloaded file (including extension).\ne.g. my-file.pdf",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
